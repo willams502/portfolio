@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <radialGradient id="shadowGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9333ea" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#4c1d95" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0f051d" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Aura -->
+  <circle cx="50" cy="50" r="48" fill="url(#shadowGlow)" />
+  <!-- Body Silhouette -->
+  <path d="M 20 52 C 20 28, 80 28, 80 52 C 80 78, 20 78, 20 52 Z" fill="#2e1065" stroke="#a855f7" stroke-width="2"/>
+  <!-- Horns / Spikes -->
+  <polygon points="25,32 15,14 36,24" fill="#2e1065" stroke="#a855f7" stroke-width="1.5"/>
+  <polygon points="75,32 85,14 64,24" fill="#2e1065" stroke="#a855f7" stroke-width="1.5"/>
+  <polygon points="46,20 50,10 54,20" fill="#2e1065" stroke="#a855f7" stroke-width="1.5"/>
+  <!-- Eyes with sinister glow -->
+  <polygon points="32,42 43,46 34,49" fill="#ef4444" filter="url(#glow)"/>
+  <polygon points="68,42 57,46 66,49" fill="#ef4444" filter="url(#glow)"/>
+  <!-- Grin -->
+  <path d="M 33 58 Q 50 72 67 58 Q 50 64 33 58 Z" fill="#ffffff" filter="url(#glow)"/>
+  <!-- Teeth separator lines -->
+  <path d="M 40 60 L 40 64 M 47 61 L 47 66 M 53 61 L 53 66 M 60 60 L 60 64" stroke="#4c1d95" stroke-width="1.5"/>
+</svg>
+
