@@ -39,7 +39,7 @@ export default function ShadowArmy() {
     if (casting || risen === SHADOWS.length) return;
     setCasting(true);
     sfx.playSystemAlert();
-    say('ERGA-SE! 💜', 3000);
+    say('BONFIRE LIT! 🔥', 3000);
     SHADOWS.forEach((_, i) => {
       setTimeout(() => {
         sfx.playClick();
@@ -59,21 +59,21 @@ export default function ShadowArmy() {
     <section>
       <div className="flex flex-wrap items-end justify-between gap-4 mb-6">
         <div>
-          <div className="sys-title text-xs text-purple-300">[ EXÉRCITO DE SOMBRAS ]</div>
-          <h2 className="font-system font-extrabold text-3xl text-white mt-1">Minha stack, invocada</h2>
-          <p className="text-purple-300/80 font-code text-xs mt-1">
-            {done ? `${SHADOWS.length} sombras sob seu comando.` : 'Os corpos dos inimigos derrotados aguardam. Use a habilidade.'}
+          <div className="sys-title text-xs text-orange-300">[ FOGUEIRA DA STACK ]</div>
+          <h2 className="font-system font-extrabold text-3xl text-white mt-1">Arsenal do Texugo, aceso</h2>
+          <p className="text-orange-200/80 font-code text-xs mt-1">
+            {done ? `${SHADOWS.length} aliados prontos na fogueira.` : 'As armas descansam nas cinzas. Acenda a fogueira.'}
           </p>
         </div>
 
         <button
           onClick={arise}
           disabled={casting || done}
-          className={`relative px-8 py-4 font-system font-extrabold text-xl tracking-[0.3em] border-2 transition cursor-pointer disabled:cursor-default
-            ${done ? 'border-purple-800 text-purple-500' : 'border-purple-300 text-white bg-purple-700/40 hover:bg-purple-600/60 shadow-[0_0_35px_rgba(168,85,247,0.8)]'}`}
-          style={{ textShadow: done ? 'none' : '0 0 14px #c084fc' }}
+          className={`relative px-8 py-4 font-system font-extrabold text-xl tracking-[0.22em] border-2 transition cursor-pointer disabled:cursor-default
+            ${done ? 'border-orange-900 text-orange-500/70' : 'border-orange-300 text-white bg-orange-700/40 hover:bg-orange-600/60 shadow-[0_0_35px_rgba(249,115,22,0.75)]'}`}
+          style={{ textShadow: done ? 'none' : '0 0 14px #fb923c' }}
         >
-          {done ? 'INVOCADOS' : casting ? 'INVOCANDO...' : 'ERGA-SE!'}
+          {done ? 'FOGUEIRA ACESA' : casting ? 'INVOCANDO...' : 'ACENDER FOGUEIRA!'}
         </button>
       </div>
 
@@ -94,11 +94,11 @@ export default function ShadowArmy() {
                 <div className="text-center mt-3 anim-pop">
                   <div className={`inline-block font-code text-[9px] tracking-widest px-1.5 border ${GRADE_STYLE[s.grade]}`}>{s.grade}</div>
                   <div className="font-system font-extrabold text-xl text-white mt-1.5" style={{ textShadow: `0 0 12px ${s.color}` }}>{s.tech}</div>
-                  <div className="font-code text-[11px] text-purple-400">sombra “{s.name}”</div>
-                  <p className="text-sm text-purple-100/80 mt-2 leading-snug">{s.desc}</p>
+                  <div className="font-code text-[11px] text-orange-300/80">aliado “{s.name}”</div>
+                  <p className="text-sm text-orange-100/80 mt-2 leading-snug">{s.desc}</p>
                 </div>
               ) : (
-                <div className="text-center mt-3 font-code text-purple-700 text-sm">???</div>
+                <div className="text-center mt-3 font-code text-orange-700/80 text-sm">???</div>
               )}
             </div>
           );

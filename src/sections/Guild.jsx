@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Mail, MessageSquare, Copy, Check, Send } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../components/Icons';
-import Gengar from '../components/Gengar';
+import HoneyBadger from '../components/HoneyBadger';
 import { HUNTER } from '../data/portfolioData';
 import { useGame } from '../game/GameContext';
 import { sfx } from '../utils/audio';
@@ -16,7 +16,7 @@ export default function Guild() {
   const recruit = () => { sfx.playClick(); unlock('recruiter'); };
 
   const inviteText = encodeURIComponent(
-    `Olá Matheus! Vi seu portfólio (Sistema das Sombras 👻).\n` +
+    `Olá Matheus! Vi seu portfólio (Texugo do Mel 🦡).\n` +
     `A guilda *${guild || 'minha empresa'}* gostaria de te recrutar` +
     (role ? ` para: ${role}.` : '.') +
     `\nPodemos conversar?`
@@ -41,31 +41,31 @@ export default function Guild() {
       {/* convite */}
       <div className="lg:col-span-3 sys-window p-6 sm:p-8 anim-pop">
         <div className="flex items-center justify-center gap-3">
-          <span className="w-6 h-6 grid place-items-center border-2 border-purple-200 text-purple-100 font-bold text-sm">!</span>
-          <span className="sys-title text-purple-100">CONVITE DE GUILDA</span>
+          <span className="w-6 h-6 grid place-items-center border-2 border-orange-200 text-orange-100 font-bold text-sm">!</span>
+          <span className="sys-title text-orange-100">CONVITE DE GUILDA</span>
         </div>
-        <p className="text-center text-purple-200/90 mt-3">
-          Um caçador Rank S está disponível para recrutamento.<br />
+        <p className="text-center text-orange-100/90 mt-3">
+          Um Texugo do Mel Rank S está disponível para recrutamento.<br />
           Preencha o convite e envie direto para ele.
         </p>
 
         <div className="mt-6 space-y-4">
           <label className="block">
-            <span className="font-code text-xs text-purple-400">NOME DA GUILDA (sua empresa)</span>
+            <span className="font-code text-xs text-orange-300">NOME DA GUILDA (sua empresa)</span>
             <input
               value={guild}
               onChange={(e) => setGuild(e.target.value)}
-              placeholder="Ex.: Guilda dos Caçadores Coreanos LTDA"
-              className="mt-1 w-full bg-black/50 border border-purple-700 focus:border-purple-300 focus:outline-none px-3 py-2.5 text-white placeholder:text-purple-800 font-code text-sm"
+              placeholder="Ex.: Guilda Bonfire Tech LTDA"
+              className="mt-1 w-full bg-black/50 border border-orange-800/80 focus:border-orange-300 focus:outline-none px-3 py-2.5 text-white placeholder:text-orange-900/80 font-code text-sm"
             />
           </label>
           <label className="block">
-            <span className="font-code text-xs text-purple-400">MISSÃO (vaga ou projeto)</span>
+            <span className="font-code text-xs text-orange-300">MISSÃO (vaga ou projeto)</span>
             <input
               value={role}
               onChange={(e) => setRole(e.target.value)}
               placeholder="Ex.: Dev Full-Stack PHP/Laravel"
-              className="mt-1 w-full bg-black/50 border border-purple-700 focus:border-purple-300 focus:outline-none px-3 py-2.5 text-white placeholder:text-purple-800 font-code text-sm"
+              className="mt-1 w-full bg-black/50 border border-orange-800/80 focus:border-orange-300 focus:outline-none px-3 py-2.5 text-white placeholder:text-orange-900/80 font-code text-sm"
             />
           </label>
         </div>
@@ -74,11 +74,11 @@ export default function Guild() {
           href={`https://wa.me/${c.whatsapp}?text=${inviteText}`}
           target="_blank" rel="noopener noreferrer"
           onClick={recruit}
-          className="mt-6 flex items-center justify-center gap-2 w-full py-3.5 bg-purple-600 hover:bg-purple-500 border border-purple-200 text-white font-system font-bold tracking-[0.2em] shadow-[0_0_25px_rgba(168,85,247,0.7)]"
+          className="mt-6 flex items-center justify-center gap-2 w-full py-3.5 bg-orange-600 hover:bg-orange-500 border border-orange-200 text-white font-system font-bold tracking-[0.2em] shadow-[0_0_25px_rgba(249,115,22,0.7)]"
         >
           <Send className="w-4 h-4" /> ENVIAR CONVITE
         </a>
-        <p className="text-center font-code text-[11px] text-purple-500 mt-2">abre o WhatsApp com a mensagem pronta</p>
+        <p className="text-center font-code text-[11px] text-orange-400/80 mt-2">abre o WhatsApp com a mensagem pronta</p>
       </div>
 
       {/* canais */}
@@ -106,8 +106,8 @@ export default function Guild() {
         </button>
 
         <div className="sys-window p-4 flex items-center gap-3 anim-pop" style={{ animationDelay: '0.4s' }}>
-          <Gengar className="w-14 h-14 shrink-0" />
-          <p className="text-sm text-purple-200 italic">"Ele responde rápido. Mais rápido que eu atravesso paredes."</p>
+          <HoneyBadger className="w-14 h-14 shrink-0" />
+          <p className="text-sm text-orange-100 italic">"Ele responde rápido. Mais rápido que um Texugo do Mel atrás de bug."</p>
         </div>
       </div>
     </section>

@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { GameProvider, useGame } from './game/GameContext';
-import GengarShadowBackground from './components/GengarShadowBackground';
+import BonfireBackground from './components/BonfireBackground';
 import BootSequence from './components/BootSequence';
 import HUD, { TABS } from './components/HUD';
-import { GengarCompanion, AchievementToasts } from './components/Overlays';
+import { BadgerCompanion, AchievementToasts } from './components/Overlays';
 import Status from './sections/Status';
 import Gates from './sections/Gates';
 import ShadowArmy from './sections/ShadowArmy';
@@ -14,10 +14,10 @@ import { sfx } from './utils/audio';
 const KONAMI = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
 
 const TAB_LINES = {
-  status: 'Essa é a ficha dele. Impressionante, né? 😈',
-  gates: 'Cada portal é um projeto. Entra, se tiver coragem!',
-  army: 'Aperta o botão. Você sabe qual. ERGA-SE!',
-  quest: 'Missão diária... ou penalidade. Escolha.',
+  status: 'Essa é a ficha do Texugo. Sem escudo e sem medo. 🦡',
+  gates: 'Cada dungeon tem um boss. Entra, se tiver coragem! ⚔️',
+  army: 'Acende a fogueira e invoca a stack inteira! 🔥',
+  quest: 'Eat. Code. Hunt. Repeat. Hora de farmar XP. ☕',
   guild: 'Vai recrutar? Já tava na hora! 🤝',
 };
 
@@ -58,7 +58,7 @@ function Game() {
         sfx.playGengarLaugh();
         setTimeout(() => sfx.playLevelUp(), 500);
         unlock('konami');
-        say('G I G A N T A M A X ! ! ! 🔴');
+        say('B O N F I R E   O V E R D R I V E ! ! ! 🔥🦡');
       }
     };
     window.addEventListener('keydown', onKey);
@@ -67,7 +67,7 @@ function Game() {
 
   if (!booted) return (
     <>
-      <GengarShadowBackground />
+      <BonfireBackground />
       <BootSequence onDone={() => setBooted(true)} />
       <AchievementToasts />
     </>
@@ -77,7 +77,7 @@ function Game() {
 
   return (
     <div className={`min-h-screen relative ${gigantamax ? 'gmax' : ''}`}>
-      <GengarShadowBackground />
+      <BonfireBackground />
       {gigantamax && <div className="fixed inset-0 -z-[5] pointer-events-none bg-[radial-gradient(circle_at_50%_120%,rgba(239,68,68,0.35),transparent_60%)]" />}
 
       <HUD tab={tab} setTab={goTo} />
@@ -86,15 +86,15 @@ function Game() {
         <Section goTo={goTo} />
       </main>
 
-      <footer className="border-t border-purple-900/50 py-5 px-4">
-        <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3 font-code text-[11px] text-purple-500">
-          <span>© {new Date().getFullYear()} Matheus Willams • Sistema das Sombras</span>
+      <footer className="border-t border-orange-900/50 py-5 px-4">
+        <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3 font-code text-[11px] text-orange-400/80">
+          <span>© {new Date().getFullYear()} Matheus Willams • Eat. Code. Hunt. Repeat. 🦡</span>
           <span className="hidden md:inline">teclas [1-5] navegam • ↑↑↓↓←→←→BA ...</span>
-          <button onClick={reset} className="hover:text-red-400 cursor-pointer">[ reiniciar sistema ]</button>
+          <button onClick={reset} className="hover:text-red-400 cursor-pointer">[ reiniciar fogueira ]</button>
         </div>
       </footer>
 
-      <GengarCompanion />
+      <BadgerCompanion />
       <AchievementToasts />
     </div>
   );

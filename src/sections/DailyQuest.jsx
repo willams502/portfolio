@@ -21,25 +21,25 @@ export default function DailyQuest() {
     if (prog[t.id] >= t.goal) return;
     sfx.playClick();
     setProg((p) => ({ ...p, [t.id]: Math.min(t.goal, p[t.id] + t.step) }));
-    if (t.id === 'coffee') say('☕ +25 MP');
+    if (t.id === 'coffee') say('☕ +25 ESTUS (Eat. Code. Hunt. Repeat.)');
   };
 
   const claim = () => {
     setClaimed(true);
     sfx.playLevelUp();
     unlock('daily');
-    say('Sem penalidade hoje. Que pena... 😏');
+    say('Sem YOU DIED hoje. O Texugo tá imparável! 🔥');
   };
 
   return (
     <section className="grid lg:grid-cols-2 gap-6">
-      {/* janela clássica da missão diária */}
+      {/* janela da missão diária */}
       <div className="sys-window p-6 sm:p-8 anim-pop">
         <div className="flex items-center justify-center gap-3">
-          <span className="w-6 h-6 grid place-items-center border-2 border-purple-200 text-purple-100 font-bold text-sm">!</span>
-          <span className="sys-title text-purple-100">MISSÃO DIÁRIA</span>
+          <span className="w-6 h-6 grid place-items-center border-2 border-orange-200 text-orange-100 font-bold text-sm">!</span>
+          <span className="sys-title text-orange-100">MISSÃO DIÁRIA</span>
         </div>
-        <p className="text-center text-purple-200 mt-2 font-system">Preparação para se tornar um dev mais forte</p>
+        <p className="text-center text-orange-200 mt-2 font-system">Eat. Code. Hunt. Repeat. — treino sem piedade</p>
 
         <div className="mt-6 space-y-3">
           {TASKS.map((t) => {
@@ -49,12 +49,12 @@ export default function DailyQuest() {
                 key={t.id}
                 onClick={() => train(t)}
                 className={`w-full flex items-center justify-between gap-4 px-4 py-3 border font-code text-sm transition cursor-pointer
-                  ${done ? 'border-emerald-600/50 bg-emerald-950/20' : 'border-purple-800 hover:border-purple-400 bg-black/30'}`}
+                  ${done ? 'border-emerald-600/50 bg-emerald-950/20' : 'border-orange-900/80 hover:border-orange-400 bg-black/30'}`}
               >
-                <span className={done ? 'text-emerald-300' : 'text-purple-100'}>{t.label}</span>
+                <span className={done ? 'text-emerald-300' : 'text-orange-100'}>{t.label}</span>
                 <span className="flex items-center gap-3">
                   <span className={done ? 'text-emerald-400' : 'text-white'}>[{prog[t.id]}/{t.goal}]</span>
-                  <span className={`w-5 h-5 grid place-items-center border ${done ? 'border-emerald-400 text-emerald-400' : 'border-purple-600 text-purple-600'}`}>
+                  <span className={`w-5 h-5 grid place-items-center border ${done ? 'border-emerald-400 text-emerald-400' : 'border-orange-600 text-orange-500'}`}>
                     {done ? '✔' : '+'}
                   </span>
                 </span>
@@ -63,37 +63,37 @@ export default function DailyQuest() {
           })}
         </div>
 
-        <p className="text-center text-xs text-purple-400/80 font-code mt-4">clique nas tarefas para treinar</p>
+        <p className="text-center text-xs text-orange-300/70 font-code mt-4">clique nas tarefas para treinar</p>
 
         {allDone && !claimed && (
-          <button onClick={claim} className="mt-5 w-full py-3 bg-purple-600 hover:bg-purple-500 border border-purple-200 text-white font-system tracking-widest shadow-[0_0_20px_rgba(168,85,247,0.7)] anim-pop cursor-pointer">
+          <button onClick={claim} className="mt-5 w-full py-3 bg-orange-600 hover:bg-orange-500 border border-orange-200 text-white font-system tracking-widest shadow-[0_0_20px_rgba(249,115,22,0.7)] anim-pop cursor-pointer">
             RESGATAR RECOMPENSA
           </button>
         )}
         {claimed && (
           <div className="mt-5 p-3 border border-emerald-500/50 bg-emerald-950/30 text-center anim-pop">
             <div className="sys-title text-xs text-emerald-300">MISSÃO CONCLUÍDA</div>
-            <div className="font-code text-xs text-emerald-200/90 mt-1">Recompensa: Recuperação total • +3 pontos de atributo • 1 Caixa Aleatória</div>
+            <div className="font-code text-xs text-emerald-200/90 mt-1">Recompensa: Estus cheio • +3 pontos de atributo • 1 Pokéball Misteriosa</div>
           </div>
         )}
 
         <div className="mt-6 border-t border-red-900/60 pt-4 text-center">
           <span className="font-code text-xs text-red-400">⚠ AVISO: </span>
-          <span className="font-code text-xs text-red-300/90">não completar a missão diária resultará em uma penalidade apropriada.</span>
+          <span className="font-code text-xs text-red-300/90">pular o café resulta em perda imediata de sanidade em produção.</span>
         </div>
       </div>
 
       {/* crônicas */}
       <div className="sys-window p-6 sm:p-8 anim-pop" style={{ animationDelay: '0.1s' }}>
-        <div className="sys-title text-xs text-purple-300 mb-5">[ CRÔNICAS DO CAÇADOR ]</div>
-        <ol className="relative border-l border-purple-700/60 ml-3 space-y-6">
+        <div className="sys-title text-xs text-orange-300 mb-5">[ CRÔNICAS DO TEXUGO ]</div>
+        <ol className="relative border-l border-orange-700/60 ml-3 space-y-6">
           {CHRONICLES.map((c) => (
             <li key={c.ch} className="pl-6 relative">
-              <span className={`absolute -left-[13px] top-0 w-6 h-6 grid place-items-center text-[10px] font-code border rotate-45 ${c.locked ? 'bg-black border-red-500 text-red-400' : 'bg-purple-900 border-purple-400 text-purple-100'}`}>
+              <span className={`absolute -left-[13px] top-0 w-6 h-6 grid place-items-center text-[10px] font-code border rotate-45 ${c.locked ? 'bg-black border-red-500 text-red-400' : 'bg-orange-950 border-orange-400 text-orange-100'}`}>
                 <span className="-rotate-45">{c.ch}</span>
               </span>
               <div className={`font-system font-bold ${c.locked ? 'text-red-400' : 'text-white'}`}>{c.title}</div>
-              <p className={`text-sm ${c.locked ? 'text-red-300/70 italic' : 'text-purple-200/80'}`}>{c.text}</p>
+              <p className={`text-sm ${c.locked ? 'text-red-300/70 italic' : 'text-orange-100/80'}`}>{c.text}</p>
             </li>
           ))}
         </ol>

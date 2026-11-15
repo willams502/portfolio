@@ -5,14 +5,14 @@
 export const HUNTER = {
   name: 'Matheus Willams',
   handle: 'willams502',
-  title: 'Monarca das Sombras',
-  class: 'Necromante Full-Stack',
-  subclass: 'Tipo Fantasma • Afinidade Gengar',
+  title: 'Texugo do Mel',
+  class: 'Dev Berserker Full-Stack',
+  subclass: 'Eat. Code. Hunt. Repeat.',
   level: 89,
   lore: [
-    'Despertou escrevendo HTML, CSS e JS em sites pequenos — e nunca mais parou de subir de nível.',
-    'Passou por dezenas de dungeons de PHP até dominar Laravel, e hoje mantém ERPs e sistemas em produção de verdade.',
-    'Nas horas vagas invoca bots em Python que trabalham sozinhos enquanto ele dorme. Monarca das Sombras, literalmente.',
+    'Despertou escrevendo HTML, CSS e JS sem escudo — e desde então encara qualquer bug de frente, estilo Texugo do Mel.',
+    'Sobreviveu a dezenas de dungeons de PHP e Dark Souls até dominar Laravel, mantendo ERPs e sistemas críticos em produção de verdade.',
+    'Com a caneca "Eat. Code. Hunt. Repeat." sempre cheia, invoca bots em Python que caçam tarefas sozinhos enquanto ele joga na fogueira.',
   ],
   // radar chart (0-100)
   stats: [
@@ -23,10 +23,10 @@ export const HUNTER = {
     { key: 'DEBUG', label: 'Debug / Hotfix', value: 96 },
   ],
   equipment: [
-    { slot: 'ARMA', name: 'Teclado Mecânico', bonus: '+30 velocidade de commit', rarity: 'epic' },
-    { slot: 'ACESSÓRIO', name: 'Caneca de Café Infinita', bonus: '+∞ MP regen', rarity: 'legendary' },
-    { slot: 'ELMO', name: 'Headset de Foco Absoluto', bonus: 'Imune a distrações', rarity: 'rare' },
-    { slot: 'RELÍQUIA', name: 'Gengarita (Mega Stone)', bonus: 'Desbloqueia forma Mega', rarity: 'mythic' },
+    { slot: 'ARMA', name: 'Teclado Mecânico RGB', bonus: '+30 velocidade de commit', rarity: 'epic' },
+    { slot: 'ESTUS', name: 'Caneca "Eat. Code. Hunt. Repeat."', bonus: '+∞ MP regen (café infinito)', rarity: 'legendary' },
+    { slot: 'ELMO', name: 'Headset Pokéball Gamer', bonus: 'Imune a distrações & ruído', rarity: 'rare' },
+    { slot: 'ARMADURA', name: 'Moletom Dark Souls Bonfire', bonus: 'Resistência máxima em produção', rarity: 'mythic' },
   ],
   contacts: {
     whatsapp: '5531974012890',
@@ -149,7 +149,7 @@ export const CHRONICLES = [
   { ch: 'I', title: 'O Primeiro Portal', text: 'Primeiros sites em HTML5, CSS3 e JS — Sitesenior, Aromas da May, Snake.' },
   { ch: 'II', title: 'O Caminho do PHP', text: 'Dezenas de repositórios de estudo: tipos, strings, funções, operadores, saídas.' },
   { ch: 'III', title: 'A Forja dos Frameworks', text: 'CodeIgniter, Laravel, desafios técnicos e projetos completos com banco.' },
-  { ch: 'IV', title: 'O Despertar das Sombras', text: 'Bots em Python: Catho, WhatsApp, tradutor de PDF. Código que trabalha sozinho.' },
-  { ch: 'V', title: 'Raids em Produção', text: 'ERP Genial em Laravel 13 e Nova Central — sistemas reais, usuários reais, hotfixes reais.' },
+  { ch: 'IV', title: 'Eat. Code. Hunt. Repeat.', text: 'Bots em Python: Catho, WhatsApp, tradutor de PDF. Código que caça sozinho.' },
+  { ch: 'V', title: 'Raids na Fogueira', text: 'ERP Genial em Laravel 13 e Nova Central — sistemas reais, usuários reais, hotfixes sem medo.' },
   { ch: 'VI', title: '???', text: 'Próximo capítulo: a sua guilda.', locked: true },
 ];

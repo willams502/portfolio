@@ -8,19 +8,19 @@
 
 body {
   font-family: var(--font-body);
-  background: #05010a;
-  color: #e9e3f5;
+  background: #08050a;
+  color: #f3ede8;
 }
 
-/* ---------- Janela do Sistema ---------- */
+/* ---------- Janela do Sistema (Bonfire + Setup RGB) ---------- */
 .sys-window {
   position: relative;
-  background: linear-gradient(180deg, rgba(30, 10, 60, 0.82), rgba(12, 4, 26, 0.9));
-  border: 1px solid rgba(192, 132, 252, 0.55);
+  background: linear-gradient(180deg, rgba(24, 14, 28, 0.86), rgba(10, 6, 14, 0.93));
+  border: 1px solid rgba(249, 115, 22, 0.5);
   box-shadow:
-    0 0 0 1px rgba(76, 29, 149, 0.6) inset,
-    0 0 24px rgba(147, 51, 234, 0.35),
-    0 0 60px rgba(147, 51, 234, 0.12);
+    0 0 0 1px rgba(124, 58, 237, 0.35) inset,
+    0 0 24px rgba(234, 88, 12, 0.28),
+    0 0 60px rgba(147, 51, 234, 0.14);
   backdrop-filter: blur(10px);
   clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 14px, 100% calc(100% - 14px), calc(100% - 14px) 100%, 14px 100%, 0 calc(100% - 14px), 0 14px);
 }
@@ -34,7 +34,7 @@ body {
 .sys-title {
   font-family: var(--font-system);
   letter-spacing: 0.25em;
-  text-shadow: 0 0 12px rgba(192, 132, 252, 0.9);
+  text-shadow: 0 0 12px rgba(251, 146, 60, 0.85);
 }
 
 /* ---------- Glitch ---------- */
@@ -114,20 +114,20 @@ body {
   50% { box-shadow: 0 0 60px var(--gate), inset 0 0 50px var(--gate); }
 }
 
-/* ---------- Gigantamax mode ---------- */
+/* ---------- Rage / Bonfire Overdrive mode ---------- */
 .gmax {
   --tw-gmax: 1;
 }
 .gmax .sys-window {
-  border-color: rgba(239, 68, 68, 0.7);
-  box-shadow: 0 0 30px rgba(239, 68, 68, 0.45), 0 0 80px rgba(147, 51, 234, 0.3);
+  border-color: rgba(239, 68, 68, 0.8);
+  box-shadow: 0 0 32px rgba(239, 68, 68, 0.5), 0 0 80px rgba(249, 115, 22, 0.35);
 }
 
 /* scrollbar */
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #07020f; }
-::-webkit-scrollbar-thumb { background: #581c87; }
-::-webkit-scrollbar-thumb:hover { background: #7e22ce; }
+::-webkit-scrollbar-track { background: #08050a; }
+::-webkit-scrollbar-thumb { background: #9a3412; }
+::-webkit-scrollbar-thumb:hover { background: #ea580c; }
 
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }

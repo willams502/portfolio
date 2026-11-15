@@ -2,20 +2,20 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useRef, use
 import { sfx } from '../utils/audio';
 
 export const ACHIEVEMENTS = {
-  awakened: { icon: '⚡', title: 'O Despertar', desc: 'Aceitou se tornar um Jogador.', xp: 50 },
-  rebel: { icon: '☠️', title: 'Zona de Penalidade', desc: 'Tentou recusar o Sistema. Ousado.', xp: 30 },
-  explorer: { icon: '🗺️', title: 'Cartógrafo', desc: 'Visitou todas as áreas do Sistema.', xp: 100 },
-  firstGate: { icon: '🌀', title: 'Primeiro Gate', desc: 'Entrou na sua primeira dungeon.', xp: 40 },
-  allGates: { icon: '🏆', title: 'Limpador de Gates', desc: 'Explorou todas as dungeons.', xp: 150 },
-  arise: { icon: '👤', title: 'ERGA-SE!', desc: 'Extraiu o Exército de Sombras.', xp: 80 },
-  daily: { icon: '📜', title: 'Missão Diária', desc: 'Completou o treino diário sem penalidade.', xp: 80 },
-  gengar: { icon: '👻', title: 'Melhor Amigo Fantasma', desc: 'Cutucou o Gengar 5 vezes.', xp: 40 },
+  awakened: { icon: '🔥', title: 'Fogueira Acesa', desc: 'Aceitou o pacto Eat. Code. Hunt. Repeat.', xp: 50 },
+  rebel: { icon: '☠️', title: 'YOU DIED', desc: 'Tentou recusar o Texugo do Mel. Ousado.', xp: 30 },
+  explorer: { icon: '🗺️', title: 'Cartógrafo', desc: 'Visitou todas as áreas do portfólio.', xp: 100 },
+  firstGate: { icon: '⚔️', title: 'Primeiro Boss', desc: 'Entrou na sua primeira dungeon.', xp: 40 },
+  allGates: { icon: '🏆', title: 'Caçador Implacável', desc: 'Explorou todas as dungeons.', xp: 150 },
+  arise: { icon: '🔥', title: 'BONFIRE LIT!', desc: 'Invocou toda a stack na fogueira.', xp: 80 },
+  daily: { icon: '☕', title: 'Rotina do Texugo', desc: 'Completou o treino diário sem perder Estus.', xp: 80 },
+  gengar: { icon: '🦡', title: 'Texugo Destemido', desc: 'Cutucou o Texugo do Mel 5 vezes.', xp: 40 },
   recruiter: { icon: '🤝', title: 'Recrutador de Guilda', desc: 'Abriu um canal de contato.', xp: 120 },
-  konami: { icon: '🔴', title: 'Gigantamax', desc: '↑↑↓↓←→←→BA. Um verdadeiro gamer.', xp: 200 },
+  konami: { icon: '🔴', title: 'Modo Fúria', desc: '↑↑↓↓←→←→BA. Texugo em fúria total!', xp: 200 },
 };
 
 const RANKS = ['E', 'D', 'C', 'B', 'A', 'S'];
-const STORAGE = 'shadow-system-v1';
+const STORAGE = 'honey-badger-system-v1';
 
 const GameCtx = createContext(null);
 
