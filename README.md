@@ -1,16 +1,29 @@
-# React + Vite
+# 👻 Portfólio Interativo — Matheus Willams (Solo Leveling x Gengar)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Portfólio pessoal interativo desenvolvido com **React**, **Vite** e **JavaScript**, combinando estética gamer (Solo Leveling System + Gengar) com apresentação clara de projetos, stack técnica e canais de contato.
 
-Currently, two official plugins are available:
+## 🌐 Demonstração Online
+👉 **[willams502.github.io/portfolio](https://willams502.github.io/portfolio/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Funcionalidades
+- Interface temática interativa inspirada em sistema de status RPG
+- Seções organizadas para Sobre Mim, Habilidades, Projetos e Contato
+- Layout responsivo para desktop e dispositivos móveis
+- Build otimizado com Vite e deploy automatizado via GitHub Pages
 
-## React Compiler
+## 🛠️ Tecnologias
+- React
+- Vite
+- JavaScript (ES6+)
+- CSS3
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Como executar localmente
+```bash
+git clone https://github.com/willams502/portfolio.git
+cd portfolio
+npm install
+npm run dev
+```
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 👤 Autor
+**Matheus Willams** — [GitHub](https://github.com/willams502) · [LinkedIn](https://www.linkedin.com/in/matheuswillams/)
